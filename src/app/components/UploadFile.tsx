@@ -1,18 +1,15 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import clsx from 'clsx';
-import Image from 'next/image';
-import {
-  FileRejection,
-  useDropzone,
-} from 'react-dropzone';
+import clsx from "clsx";
+import Image from "next/image";
+import { FileRejection, useDropzone } from "react-dropzone";
 
-import { Cross2Icon } from '@radix-ui/react-icons';
-import { Spinner } from '@radix-ui/themes';
+import { Cross2Icon } from "@radix-ui/react-icons";
+import { Spinner } from "@radix-ui/themes";
 
-import ScanIcon from '../ui/ScanIcon';
+import ScanIcon from "../ui/ScanIcon";
 
 type CompProps = {
   children?: React.ReactNode;
@@ -39,6 +36,7 @@ const UploadFile: React.FC<CompProps> = ({
     },
     accept: {
       "image/png": [".png", ".PNG"],
+      "image/jpeg": [".jpg", ".jpeg", ".JPG", ".JPEG"],
     },
     maxFiles: 1,
     multiple: false,
